@@ -18,7 +18,7 @@ public class FarmerDA {
 //            e.printStackTrace();
 //        }
         try {
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ZahraDb", "postgres", "29399");
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/ZahraDb", "postgres", "1234");
             connection.setAutoCommit(false);
         } catch (SQLException e) {
             e.printStackTrace();
