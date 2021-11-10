@@ -1,0 +1,23 @@
+
+.header{
+    background-color: white;
+}
+.bg{
+     background-image:url("backgrand.jpg");
+    width: 1500px;
+    height: 1000px;
+    background-size: cover;
+    z-index:-1;
+
+}
+.talgh{
+    background-color:rgba(20,20,20,.6);
+    margin:70px;
+    width: 70%;
+    height: 600px;
+    color: #ffffff;
+}
+.hilight{ background-color:rgba(0,10,10,.6);
+
+    color: #ffffff;
+}

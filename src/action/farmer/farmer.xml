@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    
+    <package name="farmerEntrance" namespace="/" extends="struts-default">
+        <action name="FarmerLogin">
+            <result type="redirect">/login_farmer.jsp</result>
+        </action>
+    </package>
+
+
+    <package name="FarmerRegister" namespace="/FarmerRegister" extends="struts-default">
+        <action name="Registeration">
+            <result>/prophile_farmer.jsp</result>
+        </action>
+        <action name="Register" class="action.farmer.FarmerRegister">
+            <result type="redirect">/index.jsp</result>
+            <result name="input">/prophile_farmer.jsp</result>
+        </action>
+        <action name="Cancel" >
+            <result type="redirect">/index.jsp</result>
+        </action>
+    </package>
+
+    <package name="FarmerProfile" namespace="/FarmerProfile" extends="struts-default">
+
+        <action name="FarmerLogin" class="action.farmer.FarmerLogin">
+            <result>/farmer_user.jsp</result>
+            <result name="input">/login_farmer.jsp</result>
+        </action>
+        <action name="InsertProd">
+            <result>/insert_production.jsp</result>
+        </action>
+        <action name="ShowProd" class="action.farmer.ShowProduct">
+            <result>/productins.jsp</result>
+        </action>
+        <action name="ShowTool">
+            <result>/tools.jsp</result>
+        </action>
+        <action name="ShowProfile">
+            <result>/prophile_farmer.jsp</result>
+        </action>
+        <action name="Insert" class="action.farmer.InsertProduct">
+            <result>/farmer_user.jsp</result>
+            <result name="input">/insert_production.jsp</result>
+        </action>
+        <action name="Cancel" >
+            <result>/farmer_user.jsp</result>
+        </action>
+    </package>
+</struts>

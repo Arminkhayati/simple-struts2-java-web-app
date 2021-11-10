@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="buyerEntrance" namespace="/" extends="struts-default">
+        <action name="ShoperLogin">
+            <result type="redirect">/login_shoper.jsp</result>
+        </action>
+    </package>
+
+    <package name="BuyerRegister" namespace="/BuyerRegister" extends="struts-default">
+        <action name="Registeration">
+            <result>/prophile_shoper.jsp</result>
+        </action>
+        <action name="Register" class="action.buyer.BuyerRegister">
+            <result type="redirect">/index.jsp</result>
+            <result name="input">/prophile_shoper.jsp</result>
+        </action>
+        <action name="Cancel" >
+            <result type="redirect">/index.jsp</result>
+        </action>
+    </package>
+
+    <package name="BuyerProfile" namespace="/BuyerProfile" extends="struts-default">
+
+        <action name="BuyerLogin" class="action.buyer.BuyerLogin">
+            <result>/shoper_user.jsp</result>
+            <result name="input">/login_shoper.jsp</result>
+        </action>
+        <action name="BuyProd" class="action.buyer.BuyProduct">
+            <result>/productinss.jsp</result>
+        </action>
+        <action name="BuyTool">
+            <result>/tools.jsp</result>
+        </action>
+        <action name="ShowProfile">
+            <result>/prophile_shoper.jsp</result>
+        </action>
+        <action name="Purchase" class="action.buyer.Purchase">
+            <result>/buy.jsp</result>
+            <result name="input">/productinss.jsp</result>
+        </action>
+        <action name="Buy" class="action.buyer.Buy">
+            <result>/shoper_user.jsp</result>
+        </action>
+        <action name="Cancel" >
+            <result>/productinss.jsp</result>
+        </action>
+    </package>
+</struts>
